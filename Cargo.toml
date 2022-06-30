@@ -1,9 +1,8 @@
 [package]
-name = "rust-template"
+name = "chlorine"
 version = "0.1.0"
-description = "yeah."
-repository = "https://github.com/misilelab/rust-template"
-documentation = "https://docs.rs/rust-template"
+description = "Twitch notification with native app."
+repository = "https://github.com/misilelab3/chlorine"
 authors = ["MisileLaboratory"]
 readme = "README.md"
 license-file = "LICENSE.md"
@@ -12,3 +11,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = { version = "1.19.2", features = ["full"] }
+serde_json = { version = "1.0.82"}
+serde = { version = "1.0", features = ["derive"] }
+reqwest = { version = "0.11.11", features = ["json"]}
