@@ -1,8 +1,8 @@
 [package]
-name = "chlorine"
+name = "h2"
 version = "0.1.0"
 description = "Twitch notification with native app."
-repository = "https://github.com/misilelab3/chlorine"
+repository = "https://github.com/misilelab/h2"
 authors = ["MisileLaboratory"]
 readme = "README.md"
 license-file = "LICENSE.md"
@@ -13,5 +13,7 @@ edition = "2021"
 [dependencies]
 tokio = { version = "1.19.2", features = ["full"] }
 serde_json = { version = "1.0.82"}
-serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1.0.138", features = ["derive"] }
 reqwest = { version = "0.11.11", features = ["json"]}
+notify-rust = "4.5.8"
+h1 = { git = "https://github.com/misilelab/h1" }
