@@ -399,7 +399,7 @@ dependencies = [
 [[package]]
 name = "h1"
 version = "0.1.0"
-source = "git+https://github.com/misilelab/h1#81b03f306d6c8a0f19a330f290f173e2423e8443"
+source = "git+https://github.com/misilelab/h1#9bd3a5ecf65b4b02f70c05bdeeb2b9abfbbe3a71"
 dependencies = [
  "async-trait",
  "reqwest",

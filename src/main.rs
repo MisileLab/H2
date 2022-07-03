@@ -36,6 +36,7 @@ async fn main() {
   let credentials: TwitchInformation = serde_json::from_str(&string).unwrap();
   let mut client = Client { 
     access_token: get_access_token().await, 
+    client_id: credentials.client_id,
     filter: credentials.streamer
   };
   drop((file, string));
@@ -47,7 +48,8 @@ async fn main() {
         if err.status() == Some(StatusCode::UNAUTHORIZED) {
           client.access_token = regenerate_token().await;
         } else if err.status() != Some(StatusCode::TOO_MANY_REQUESTS) {
-          panic!("Error in request, error code: {}", err.status().unwrap().as_str());
+          println!("{:#?}", err);
+          panic!("Error in request, error code: {}", err.status().unwrap_or(StatusCode::BAD_GATEWAY).as_str());
         }
       }
     };
@@ -79,7 +81,6 @@ async fn get_access_token() -> String {
     File::open("token.txt").await.unwrap().read_to_string(&mut string).await.unwrap();
     string
   } else {
-    File::create("token.txt").await.unwrap();
     regenerate_token().await
   }
 }
@@ -87,7 +88,7 @@ async fn get_access_token() -> String {
 async fn regenerate_token() -> String {
   let mut string = "".to_string();
   File::open("config.json").await.unwrap().read_to_string(&mut string).await.unwrap();
-  File::open("token.txt").await.unwrap().set_len(0).await.unwrap();
+  File::create("token.txt").await.unwrap();
   let tempstruct: TwitchInformation = serde_json::from_str(&string).unwrap();
   drop(string);
   let temp = reqwest::Client::new()
