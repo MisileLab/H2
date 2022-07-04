@@ -35,3 +35,5 @@ jobs:
           !target/release/incremental
           !target/release/.cargo-lock
           !target/release/*.d
+          example.json
+          translation.json

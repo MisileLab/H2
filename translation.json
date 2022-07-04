@@ -1,0 +1,10 @@
+{
+    "ko_kr": [
+        "{streamer_name}님의 방송이 켜졌어요!",
+        "{game_name} 플레이 중"
+    ],
+    "en_us": [
+        "{streamer_name} starting streaming now!",
+        "playing {game_name}"
+    ]
+}

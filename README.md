@@ -23,3 +23,30 @@ Web does not give notification. also slow (load GUI)
 
 Low Performance resolve -> Rust  
 Ban posibility with web crawling -> Twitch API
+
+## How to contributing(Issue)?
+
+### Bug, crash
+
+- Set name to `[bug] example`
+- Requirements: OS Information (version and name)
+- Crash requirements: run program with RUST_BACKTRACE=1, write log
+
+### Feature request
+
+- Set name to `[request] example`
+- Requirements: Feature description, why this feature need.
+
+## How to contributing(PR)?
+
+Contributing = Thank you!
+
+### translation
+
+- Set name to `[feature] lang`
+- Add translation string to translation.json
+- Add lang name to struct TranslationHandler, impl TranslationTrait
+
+### Fix, add feature
+
+- Set name to `[feature, fix] (choose one) example`
