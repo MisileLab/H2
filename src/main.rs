@@ -67,8 +67,9 @@ async fn main() {
           .show().unwrap();
         }
       }
-      if !tempseen.len() == 0 {
-        seen = tempseen
+      if tempseen.len() != 0 {
+        seen = tempseen;
+        println!("{:#?}", seen);
       }
     }
     sleep(Duration::from_secs(10))
