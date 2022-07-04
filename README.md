@@ -4,7 +4,7 @@
 
 ## Download & Configuration 
 
-1. [Download this project](https://github.com/MisileLab/H2/actions/workflows/advisiores.yml)  
+1. [Download this project](https://github.com/MisileLab/H2/actions/workflows/test.yml)  
 2. Register application in [site](https://dev.twitch.tv/console/apps)
 3. Get client (id, secret) in application information.
 4. Rename example.json to config.json and put client (id, secret), streamers.  
