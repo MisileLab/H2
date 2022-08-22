@@ -13,7 +13,7 @@ edition = "2021"
 [dependencies]
 tokio = { version = "1.20.1", features = ["full"] }
 serde_json = { version = "1.0.85"}
-serde = { version = "1.0.143", features = ["derive"] }
+serde = { version = "1.0.144", features = ["derive"] }
 reqwest = { version = "0.11.11", features = ["json"]}
 notify-rust = "4.5.8"
 h1 = { git = "https://github.com/misilelab/h1" }
